@@ -1,8 +1,28 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
+$light-orange: #ff8c00;
+
+$text-color: black;
+
+$font-family-sans-serif: "Avenir";
+
+$navbar-margin-bottom: 0;
+
 // bower:scss
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
+
+// bower:bourbon
+// endbower
+
+$navbar-default-bg: blue;
+$navbar-default-color: $light-orange;
+
+
+.header {
+}
+
+
 
 .browsehappy {
     margin: 0.2em 0;
@@ -11,10 +31,12 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     padding: 0.2em 0;
 }
 
+.navbar-default {
+    background-color: #f8f8f8 !important;
+}
+
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -27,16 +49,7 @@ body {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
-}
+ }
 
 /* Custom page footer */
 .footer {
@@ -49,10 +62,76 @@ body {
     margin: 30px 0;
 }
 
+section {
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+section#twitter {
+color: white;
+   @include gradient-vertical(#ff4e00, #ff8400);
+ }
+
+ section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+ }
+
+ section h1:after {
+    content: " ";
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    border-bottom: 4px solid white;
+    padding-top: 10px;
+
+ }
+
+section img {
+    width:100%;
+    margin: auto;
+    display: block;
+}
+
+section .container {
+    max-width: 800px;
+    text-align: center;
+}
+ .navbar-btn {
+    margin-left: 10px;
+ }
+
+
+
+
+
 /* Main marketing message and sign up button */
 .jumbotron {
+    color: white;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+
+    background: black;
+
+    margin-bottom: 0;
+
+    overflow: hidden;
+
+    p.lead {
+        display: block;
+        margin: auto;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    small {
+        color: rgba(255,255,255,0.5);
+        font-size: 30px;
+    }
+
     .btn {
         font-size: 21px;
         padding: 14px 24px;
@@ -67,10 +146,13 @@ body {
     }
 }
 
+.get-app {
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 1200px;
     }
 
     /* Remove the padding we set earlier */
